@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="formOperacao" novalidate>
+            <div class="form-group">
+                <label class="col-md-4">1º valor</label>
+                <input type="number" class="form-control" name="unit_name" formControlName="valor1" #valor1 />
+            </div>
+            <div *ngIf="formOperacao.controls['valor1'].invalid && (formOperacao.controls['valor1'].dirty || formOperacao.controls['valor1'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="formOperacao.controls['valor1'].errors.required">
+                    Informe o 1ª valor.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4">2ª valor</label>
+                <input type="number" class="form-control" name="unit_name" formControlName="valor2" #valor2 />
+            </div>
+            <div *ngIf="formOperacao.controls['valor2'].invalid && (formOperacao.controls['valor2'].dirty || formOperacao.controls['valor2'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="formOperacao.controls['valor2'].errors.required">
+                    Informe o 2ª valor.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button (click)="subtrair(valor1.value, valor2.value)" [disabled]="formOperacao.pristine || formOperacao.invalid" class="btn btn-primary">Subtrair</button>
+            </div>
+
+            <div class="form-group">
+                Resultado -> {{resultado}}
+            </div>
+        </form>
+    </div>
+</div>
