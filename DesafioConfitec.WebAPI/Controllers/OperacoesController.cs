@@ -18,6 +18,12 @@ namespace DesafioConfitec.WebAPI.Controllers
             this.service = service;
         }
 
+        /// <summary>
+        /// Realiza o somatório entre dois valores.
+        /// </summary>
+        /// <param name="valor1">Primeiro valor a ser somado.</param>
+        /// <param name="valor2">Segundo valor a ser somado.</param>
+        /// <returns>Resultado da soma entre os valores.</returns>
         [HttpGet("{valor1}/{valor2}")]
         public IActionResult Somar(double valor1, double valor2)
         {
@@ -32,6 +38,12 @@ namespace DesafioConfitec.WebAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Realiza a subtração entre dois valores.
+        /// </summary>
+        /// <param name="valor1">Primeiro valor a ser subtraído.</param>
+        /// <param name="valor2">Segundo valor a ser subtraído.</param>
+        /// <returns>Resultado da subtração entre os valores.</returns>        
         [HttpGet("{valor1}/{valor2}")]
         public IActionResult Subtrair(double valor1, double valor2)
         {
@@ -46,6 +58,12 @@ namespace DesafioConfitec.WebAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Realiza a multiplicação entre dois valores.
+        /// </summary>
+        /// <param name="valor1">Primeiro valor a ser multiplicado.</param>
+        /// <param name="valor2">Segundo valor a ser multiplicado.</param>
+        /// <returns>Resultado da multiplicação entre os valores.</returns>
         [HttpGet("{valor1}/{valor2}")]
         public IActionResult Multiplicar(double valor1, double valor2)
         {
@@ -60,6 +78,12 @@ namespace DesafioConfitec.WebAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Realiza a divisão entre dois valores.
+        /// </summary>
+        /// <param name="valor1">Primeiro valor a ser dividido (dividendo).</param>
+        /// <param name="valor2">Primeiro valor a ser dividido (divisor).</param>
+        /// <returns>Resultado da soma entre os valores (quociente).</returns>
         [HttpGet("{valor1}/{valor2}")]
         public IActionResult Dividir(double valor1, double valor2)
         {
